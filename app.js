@@ -40,6 +40,24 @@ document.addEventListener('DOMContentLoaded', ()=> {
         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
       ]
 
-      
+      //draw the grid and render it
+  function createBoard() {
+    for (let i = 0; i < layout.length; i++) {
+      const square = document.createElement('div')
+      grid.appendChild(square)
+      squares.push(square)
+
+      if(layout[i] === 0) {
+          squares[i].classList.add('pac-dot')
+      } else if (layout[i] === 1) {
+          squares[i].classList.add('wall')
+      } else if (layout[i] === 3) {
+          sqaures[i].classList.add('power-pellet')
+      }
+
+    }
+  }
+
+  createBoard();
 
 })
