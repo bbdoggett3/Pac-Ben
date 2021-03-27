@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
       ]
 
-  const sqaures = []
+  const squares = []
       //draw the grid and render it
   function createBoard() {
     for (let i = 0; i < layout.length; i++) {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
       } else if (layout[i] === 1) {
           squares[i].classList.add('wall')
       } else if (layout[i] === 3) {
-          sqaures[i].classList.add('power-pellet')
+          squares[i].classList.add('power-pellet')
       }
     }
   }
